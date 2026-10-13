@@ -6,12 +6,7 @@ import { StageBadge } from './StageBadge';
 
 interface Props {
   stage: Stage;
-  contacts: Contact[];
-<<<<<<< HEAD
-  /** True when a search is hiding cards, so "empty" means "no matches" instead. */
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
-  filtering: boolean;
+  contacts: Contact[];  filtering: boolean;
   selectedId: string | undefined;
   draggingId: string | null;
   isDropTarget: boolean;
@@ -34,12 +29,7 @@ export function BoardColumn(props: Props) {
     event.dataTransfer.dropEffect = 'move';
   }
 
-  function onDragLeave(event: DragEvent<HTMLElement>) {
-<<<<<<< HEAD
-    // Ignore leave events fired when moving between children of this column.
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
-    if (event.currentTarget.contains(event.relatedTarget as Node | null)) return;
+  function onDragLeave(event: DragEvent<HTMLElement>) {    if (event.currentTarget.contains(event.relatedTarget as Node | null)) return;
     props.onDragEnterColumn(null);
   }
 

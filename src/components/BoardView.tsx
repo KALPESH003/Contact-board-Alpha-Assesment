@@ -10,12 +10,6 @@ export function BoardView() {
   const { contacts, query, selectedContact, openContact, moveContact } = useContacts();
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [overStage, setOverStage] = useState<Stage | null>(null);
-
-<<<<<<< HEAD
-  // Derived from the shared list on every change; never stored separately.
-  // The board shows every stage, so only the search applies here.
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   const groups = useMemo(
     () => groupByStage(selectContacts(contacts, { query, stage: null, sort: null })),
     [contacts, query],
@@ -23,10 +17,6 @@ export function BoardView() {
 
   function move(id: string, stage: Stage) {
     moveContact(id, stage);
-<<<<<<< HEAD
-    // The card re-mounts in its new column; hand focus back so keyboard users keep their place.
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
     requestAnimationFrame(() => document.querySelector<HTMLElement>(`[data-contact-id="${id}"]`)?.focus());
   }
 
@@ -42,11 +32,6 @@ export function BoardView() {
   }
 
   return (
-<<<<<<< HEAD
-    // Four equal columns; below ~1100px the board scrolls horizontally instead
-    // of squeezing cards into unreadable widths.
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
     <div className="grid min-w-[1100px] grid-cols-4 items-start gap-3 p-4">
       {STAGES.map((stage) => (
         <BoardColumn

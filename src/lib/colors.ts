@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-// Full class strings so Tailwind can detect them.
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 const LABEL_COLORS = [
   'bg-rose-100 text-rose-900',
   'bg-orange-100 text-orange-900',
@@ -29,10 +25,5 @@ function hash(input: string): number {
   }
   return h;
 }
-
-<<<<<<< HEAD
-/** The same label text always gets the same colour, so labels stay recognisable. */
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export const labelColor = (label: string) => LABEL_COLORS[hash(label.toLowerCase()) % LABEL_COLORS.length];
 export const avatarColor = (name: string) => AVATAR_COLORS[hash(name) % AVATAR_COLORS.length];

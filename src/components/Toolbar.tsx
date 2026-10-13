@@ -15,11 +15,6 @@ function isTypingTarget(target: EventTarget | null): boolean {
 export function Toolbar() {
   const { contacts, view, query, setQuery, stageFilter, setStageFilter } = useContacts();
   const inputRef = useRef<HTMLInputElement>(null);
-
-<<<<<<< HEAD
-  // "/" jumps to search, unless you are typing or a dialog is open.
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (event.key !== '/' || event.metaKey || event.ctrlKey || event.altKey) return;
@@ -31,10 +26,6 @@ export function Toolbar() {
     return () => document.removeEventListener('keydown', onKeyDown);
   }, []);
 
-<<<<<<< HEAD
-  // Stage counts reflect the current search so chips never promise rows that are not there.
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   const counts = useMemo(() => {
     const groups = groupByStage(selectContacts(contacts, { query, stage: null, sort: null }));
     return STAGES.map((stage) => ({ stage, count: groups[stage].length }));

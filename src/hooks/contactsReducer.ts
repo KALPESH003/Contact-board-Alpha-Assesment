@@ -3,28 +3,14 @@ import { present } from '../lib/text';
 import type { Contact, ContactPatch, SortKey, SortState, Stage, ViewMode } from '../types/contact';
 
 export interface Notice {
-<<<<<<< HEAD
-  /** Monotonic id so the toast timer restarts even when the text is identical. */
   seq: number;
   text: string;
-  /** Snapshot of the record before the change; present when it can be undone. */
-=======
-  seq: number;
-  text: string;
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   undo?: Contact;
 }
 
 export interface State {
-<<<<<<< HEAD
-  /** The single source of truth. Table and board are both derived from this. */
   contacts: Contact[];
   view: ViewMode;
-  /** Only the id is stored; the record itself is always looked up fresh. */
-=======
-  contacts: Contact[];
-  view: ViewMode;
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   selectedId: string | null;
   notice: Notice | null;
   noticeSeq: number;
@@ -59,13 +45,6 @@ export function createInitialState(contacts: Contact[] = SEED_CONTACTS, view: Vi
   };
 }
 
-<<<<<<< HEAD
-/**
- * Applies a Stage/Notes patch to one record. `source` decides whether the details
- * panel closes afterwards (Save) or stays as it is (drag / keyboard move).
- */
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 function commit(state: State, id: string, patch: ContactPatch, source: 'panel' | 'move'): State {
   const closing = source === 'panel' ? { selectedId: null } : {};
   const current = state.contacts.find((c) => c.id === id);
@@ -85,10 +64,6 @@ function commit(state: State, id: string, patch: ContactPatch, source: 'panel' |
   return {
     ...state,
     ...closing,
-<<<<<<< HEAD
-    // Replace by id: same array position, so rows do not jump around.
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
     contacts: state.contacts.map((c) => (c.id === id ? next : c)),
     noticeSeq: seq,
     notice: { seq, text, undo: current },
@@ -101,10 +76,6 @@ export function reducer(state: State, action: Action): State {
       return state.view === action.view ? state : { ...state, view: action.view };
 
     case 'open':
-<<<<<<< HEAD
-      // Ignore ids that do not exist so the panel can never open on nothing.
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
       return state.contacts.some((c) => c.id === action.id) ? { ...state, selectedId: action.id } : state;
 
     case 'close':

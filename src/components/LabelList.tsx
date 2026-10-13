@@ -3,20 +3,10 @@ import { cleanLabels } from '../lib/text';
 
 interface Props {
   labels: string[] | undefined;
-<<<<<<< HEAD
-  /** Chips beyond this count collapse into "+N". */
-  max?: number;
-  /** `wrap` for cards, `nowrap` for table cells. */
-  wrap?: boolean;
-}
-
-/** Renders nothing when there are no labels; callers decide what "empty" looks like. */
-=======
   max?: number;
   wrap?: boolean;
 }
 
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export function LabelList({ labels, max = 3, wrap = false }: Props) {
   const list = cleanLabels(labels);
   if (list.length === 0) return null;

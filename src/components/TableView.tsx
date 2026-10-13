@@ -41,12 +41,7 @@ export function TableView() {
     [contacts, query, stageFilter, sort],
   );
 
-<<<<<<< HEAD
-  // Up/Down moves between rows' name buttons, like a spreadsheet.
   function onBodyKeyDown(event: KeyboardEvent<HTMLTableSectionElement>) {
-=======
-   function onBodyKeyDown(event: KeyboardEvent<HTMLTableSectionElement>) {
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
     if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
     const target = event.target as HTMLElement;
     if (!target.hasAttribute('data-contact-id')) return;
@@ -109,10 +104,6 @@ export function TableView() {
         {rows.length === 0 && (
           <tr>
             <td colSpan={COLUMNS.length} className="p-0">
-<<<<<<< HEAD
-              {/* Sticky so the message stays centred in view while the table scrolls sideways. */}
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
               <div className="sticky left-0 w-[min(100vw,100%)]">
                 {contacts.length === 0 ? (
                   <p className="py-16 text-center text-sm text-muted">No contacts yet.</p>

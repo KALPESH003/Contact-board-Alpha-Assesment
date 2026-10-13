@@ -1,15 +1,4 @@
 import type { Contact } from '../types/contact';
-
-<<<<<<< HEAD
-/**
- * Fictional seed data. It is deliberately uneven so the UI gets exercised:
- *  - Customer has zero contacts            -> empty board column
- *  - Several records have no notes/labels  -> missing optional fields
- *  - One record has no owner               -> blank required string
- *  - One record has very long values       -> truncation and label overflow
- */
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export const SEED_CONTACTS: Contact[] = [
   {
     id: 'c-001',
@@ -87,11 +76,6 @@ export const SEED_CONTACTS: Contact[] = [
     owner: 'Daniel Reyes',
     labels: ['Agency'],
     stage: 'Lead',
-<<<<<<< HEAD
-    // notes intentionally missing
-=======
-  
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   },
   {
     id: 'c-008',
@@ -102,11 +86,6 @@ export const SEED_CONTACTS: Contact[] = [
     owner: 'Maya Chen',
     labels: [],
     stage: 'Qualified',
-<<<<<<< HEAD
-    // no labels, no notes
-=======
-
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   },
   {
     id: 'c-009',
@@ -114,11 +93,7 @@ export const SEED_CONTACTS: Contact[] = [
     email: 'hana.kobayashi@tidepool.example',
     company: 'Tidepool Robotics',
     role: 'Partnerships Lead',
-<<<<<<< HEAD
-    owner: '', // unassigned
-=======
     owner: '',
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
     labels: ['Partner', 'Hardware'],
     stage: 'Prospect',
     notes: 'Referred by Tomás. Not yet assigned to an owner.',

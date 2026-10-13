@@ -9,10 +9,6 @@ interface State {
   error: Error | null;
 }
 
-<<<<<<< HEAD
-/** A crash in one view shows a recoverable message instead of a blank page. */
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export class ErrorBoundary extends Component<Props, State> {
   state: State = { error: null };
 

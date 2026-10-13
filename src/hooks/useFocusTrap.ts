@@ -10,27 +10,9 @@ const FOCUSABLE = [
 ].join(',');
 
 interface Options {
-<<<<<<< HEAD
-  /** Called when Escape is pressed. */
-  onEscape: () => void;
-  /**
-   * CSS selector of the element that should receive focus when the trap is
-   * released. Preferred over "whatever was focused before" because the opener
-   * can move or re-mount (a board card changes column after a save).
-   */
-  returnFocusSelector?: string;
-}
-
-/**
- * Traps Tab / Shift+Tab inside `containerRef`, closes on Escape, moves focus
- * into the container on mount and gives it back on unmount.
- */
-=======
   onEscape: () => void;
   returnFocusSelector?: string;
 }
-
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export function useFocusTrap(containerRef: RefObject<HTMLElement>, options: Options) {
   const { returnFocusSelector } = options;
   const escapeRef = useRef(options.onEscape);

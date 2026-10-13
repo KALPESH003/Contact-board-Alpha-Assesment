@@ -10,11 +10,6 @@ import { CloseIcon } from './icons';
 import { LabelList } from './LabelList';
 
 const NOTES_MAX = 1000;
-
-<<<<<<< HEAD
-/** Shell: renders nothing when closed, and re-mounts per contact (fresh draft). */
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export function DetailsPanel() {
   const { selectedContact } = useContacts();
   if (!selectedContact) return null;
@@ -26,12 +21,6 @@ function PanelContent({ contact }: { contact: Contact }) {
   const panelRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
   const notesId = useId();
-<<<<<<< HEAD
-
-  // Draft state lives only here. Nothing reaches the shared store until Save,
-  // and unmounting the panel (Cancel, Esc, backdrop, X) throws the draft away.
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   const [stage, setStage] = useState<Stage>(contact.stage);
   const [notes, setNotes] = useState(contact.notes ?? '');
 

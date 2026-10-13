@@ -12,13 +12,6 @@ const OPTIONS: { id: ViewMode; label: string; icon: ReactNode }[] = [
   { id: 'board', label: 'Board', icon: <BoardIcon /> },
 ];
 
-<<<<<<< HEAD
-/**
- * Segmented control implemented as a tablist (the two views are tab panels).
- * Roving tabindex + arrow keys, selection follows focus.
- */
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export function ViewSwitcher({ view, onChange }: Props) {
   function onKeyDown(event: KeyboardEvent<HTMLDivElement>) {
     const index = OPTIONS.findIndex((o) => o.id === view);

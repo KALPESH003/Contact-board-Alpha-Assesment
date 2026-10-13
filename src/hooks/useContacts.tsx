@@ -34,11 +34,6 @@ interface ContactsContextValue {
 const ContactsContext = createContext<ContactsContextValue | null>(null);
 
 const VIEW_KEY = 'contact-board:view';
-
-<<<<<<< HEAD
-/** The only thing persisted: which view you were on. Storage can throw (private mode). */
-=======
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 function readStoredView(): ViewMode {
   try {
     const stored = window.localStorage.getItem(VIEW_KEY);
@@ -62,18 +57,8 @@ export function ContactsProvider({ children, initialContacts = SEED_CONTACTS }: 
     try {
       window.localStorage.setItem(VIEW_KEY, state.view);
     } catch {
-<<<<<<< HEAD
-      /* ignore: persistence is a convenience only */
     }
   }, [state.view]);
-
-  // dispatch is stable, so these callbacks never change identity and can never
-  // capture stale state: the reducer always works on the latest state.
-=======
-    }
-  }, [state.view]);
-
->>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   const actions = useMemo(
     () => ({
       setView: (view: ViewMode) => dispatch({ type: 'setView', view }),
