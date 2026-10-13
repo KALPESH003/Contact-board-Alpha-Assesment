@@ -14,7 +14,10 @@ export interface Contact {
   notes?: string;
 }
 
+<<<<<<< HEAD
 /** The only fields the details panel is allowed to change. */
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export type ContactPatch = Partial<Pick<Contact, 'stage' | 'notes'>>;
 
 export type SortKey = 'name' | 'email' | 'company' | 'role' | 'owner' | 'stage';

@@ -10,6 +10,7 @@ const FOCUSABLE = [
 ].join(',');
 
 interface Options {
+<<<<<<< HEAD
   /** Called when Escape is pressed. */
   onEscape: () => void;
   /**
@@ -24,6 +25,12 @@ interface Options {
  * Traps Tab / Shift+Tab inside `containerRef`, closes on Escape, moves focus
  * into the container on mount and gives it back on unmount.
  */
+=======
+  onEscape: () => void;
+  returnFocusSelector?: string;
+}
+
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export function useFocusTrap(containerRef: RefObject<HTMLElement>, options: Options) {
   const { returnFocusSelector } = options;
   const escapeRef = useRef(options.onEscape);

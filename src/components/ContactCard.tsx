@@ -16,10 +16,13 @@ interface Props {
   onDragEnd: () => void;
 }
 
+<<<<<<< HEAD
 /**
  * A div with role="button" rather than a <button>: Firefox does not start a drag
  * from a real button element. Enter/Space open it; Alt+←/→ move it between stages.
  */
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export function ContactCard({ contact, selected, dragging, onOpen, onMove, onDragStart, onDragEnd }: Props) {
   const role = present(contact.role);
   const company = present(contact.company);

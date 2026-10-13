@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 # Optional browser smoke test: `npm run build && npx vite preview --port 4173`, then `python3 scripts/e2e_smoke.py` (needs `pip install playwright`).
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 from playwright.sync_api import sync_playwright, expect
 import sys
 URL="http://localhost:4173/"

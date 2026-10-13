@@ -17,9 +17,12 @@ function Shell() {
   const pageRef = useRef<HTMLDivElement>(null);
   const panelOpen = selectedContact !== null;
 
+<<<<<<< HEAD
   // While the panel is open the page behind it is inert: no focus, no clicks,
   // hidden from assistive tech. A layout effect (not useEffect) so inert is
   // lifted before the panel's cleanup tries to return focus to the opener.
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   useLayoutEffect(() => {
     const el = pageRef.current;
     if (!el) return;
@@ -27,7 +30,10 @@ function Shell() {
     else el.removeAttribute('inert');
   }, [panelOpen]);
 
+<<<<<<< HEAD
   // The board always shows all four stages, so the stage filter only counts in the table.
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   const shown = useMemo(
     () => selectContacts(contacts, { query, stage: view === 'table' ? stageFilter : null, sort: null }).length,
     [contacts, query, stageFilter, view],
@@ -38,14 +44,20 @@ function Shell() {
 
   return (
     <>
+<<<<<<< HEAD
       {/* Blurred backdrop. Swap public/backdrop.svg for any photo to restyle. */}
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
       <div
         aria-hidden="true"
         className="fixed inset-[-4%] -z-10 bg-cover bg-center blur-[18px] saturate-[1.15]"
         style={{ backgroundImage: `url(${import.meta.env.BASE_URL}backdrop.svg)` }}
       />
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 bg-black/10" />
+<<<<<<< HEAD
       {/* Thin inset frame, only where there is room for it. */}
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
       <div
         aria-hidden="true"
         className="pointer-events-none fixed inset-[30px] hidden rounded-[3px] border border-white/60 xl:block"

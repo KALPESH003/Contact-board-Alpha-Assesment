@@ -1,10 +1,13 @@
 import { useEffect } from 'react';
 import { useContacts } from '../hooks/useContacts';
 
+<<<<<<< HEAD
 /**
  * Polite live region + short-lived confirmation. Stage changes carry an Undo,
  * so a mis-drop or a hasty save is one click from recovery.
  */
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export function Toast() {
   const { notice, dismissNotice, undoLast } = useContacts();
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Dependencies
 node_modules/
 Build output
@@ -35,3 +36,8 @@ IDE and OS files
 .idea/
 .DS_Store
 Thumbs.db
+=======
+node_modules
+dist
+*.local
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)

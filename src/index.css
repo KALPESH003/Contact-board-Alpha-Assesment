@@ -14,8 +14,11 @@
 }
 
 @layer components {
+<<<<<<< HEAD
   /* One focus treatment everywhere. The inset variant is for elements that live
      inside overflow-hidden cells, where an outer ring would be clipped. */
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1;
   }

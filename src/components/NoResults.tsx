@@ -1,6 +1,9 @@
 import { useContacts } from '../hooks/useContacts';
 
+<<<<<<< HEAD
 /** Shown when search/filter leaves nothing to display. Always offers a way out. */
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export function NoResults({ compact = false }: { compact?: boolean }) {
   const { query, stageFilter, clearFilters } = useContacts();
   const parts = [query.trim() && `“${query.trim()}”`, stageFilter && `the ${stageFilter} stage`].filter(Boolean);

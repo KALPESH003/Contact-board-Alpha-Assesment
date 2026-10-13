@@ -3,17 +3,25 @@ import type { Stage } from '../types/contact';
 export const STAGES: Stage[] = ['Lead', 'Prospect', 'Qualified', 'Customer'];
 
 interface StageMeta {
+<<<<<<< HEAD
   /** Colour of the small dot. */
   dot: string;
   /** Tinted pill used in the table, board headers and the panel. */
   badge: string;
   /** Applied to the radio pill in the panel when it is checked. */
+=======
+  dot: string;
+  badge: string;
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   selected: string;
   emptyTitle: string;
   emptyHint: string;
 }
 
+<<<<<<< HEAD
 // Full class strings (not interpolated) so Tailwind can see them at build time.
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export const STAGE_META: Record<Stage, StageMeta> = {
   Lead: {
     dot: 'bg-stone-400',

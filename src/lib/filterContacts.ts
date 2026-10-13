@@ -13,7 +13,10 @@ function haystack(c: Contact): string {
     .toLowerCase();
 }
 
+<<<<<<< HEAD
 /** Every whitespace-separated term must appear somewhere in the record. */
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export function matchesQuery(contact: Contact, query: string): boolean {
   const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
   if (terms.length === 0) return true;
@@ -28,10 +31,13 @@ function compare(a: Contact, b: Contact, sort: SortState): number {
   return a[sort.key].localeCompare(b[sort.key], undefined, { sensitivity: 'base' });
 }
 
+<<<<<<< HEAD
 /**
  * Pure selector shared by both views: search -> stage filter -> sort.
  * Blank values always sort last, whatever the direction.
  */
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
 export function selectContacts(contacts: Contact[], { query, stage, sort }: ViewQuery): Contact[] {
   let result = contacts.filter((c) => matchesQuery(c, query) && (stage === null || c.stage === stage));
   if (sort) {

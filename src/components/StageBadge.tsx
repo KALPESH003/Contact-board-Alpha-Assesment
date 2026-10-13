@@ -4,7 +4,10 @@ import type { Stage } from '../types/contact';
 const FALLBACK = { dot: 'bg-stone-400', badge: 'bg-stone-100 text-stone-700' };
 
 export function StageBadge({ stage }: { stage: Stage }) {
+<<<<<<< HEAD
   // Fallback guards against an unexpected stage value at runtime.
+=======
+>>>>>>> e3008d5 (Initial commit for Contact Board Alpha Assessment)
   const meta = STAGE_META[stage] ?? FALLBACK;
   return (
     <span
